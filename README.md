@@ -165,9 +165,9 @@ Configure o `application.properties`:
 
 ```properties
 # Configuração do PostgreSQL
-spring.datasource.url=jdbc:postgresql://localhost/literalura
-spring.datasource.username=seu_usuario
-spring.datasource.password=sua_senha
+spring.datasource.url=jdbc:postgresql://${DB_HOST}/${DB_NAME}
+spring.datasource.username=${DB_USER}
+spring.datasource.password=${DB_PASSWORD}
 spring.datasource.driver-class-name=org.postgresql.Driver
 
 # Configuração JPA
@@ -181,9 +181,9 @@ spring.jpa.properties.hibernate.format_sql=true
 Para maior segurança, recomenda-se usar variáveis de ambiente para informações sensíveis. Exemplo:
 
 ```properties
-spring.datasource.url=${DATABASE_URL}
-spring.datasource.username=${DATABASE_USERNAME}
-spring.datasource.password=${DATABASE_PASSWORD}
+spring.datasource.url=jdbc:postgresql://${DB_HOST}/${DB_NAME}
+spring.datasource.username=${DB_USER}
+spring.datasource.password=${DB_PASSWORD}
 ```
 
 ## 🔧 Instalação
